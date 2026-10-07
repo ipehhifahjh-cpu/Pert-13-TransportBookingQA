@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_ice_slate"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="32dp">
+
+        <!-- Header Card: Modern Navy Indigo Gradient Brand Bar -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/primary_navy"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvAppTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/text_on_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAppSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/app_subtitle"
+                    android:textColor="@color/accent_emerald_light"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Form Pemesanan Tiket Card (MaterialCardView radius 16dp, elevation 4dp) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardBookingForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/surface_white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/surface_border"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_booking_title"
+                    android:textColor="@color/text_main"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/header_booking_subtitle"
+                    android:textColor="@color/text_muted"
+                    android:textSize="12sp" />
+
+                <!-- Input NIK -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNik"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:hint="@string/label_nik"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:boxStrokeColor="@color/primary_navy"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="16"
+                    app:helperText="@string/hint_nik"
+                    app:helperTextTextColor="@color/text_muted">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNik"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="16"
+                        android:textColor="@color/text_main"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Input Nama -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilName"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:hint="@string/label_name"
+                    app:boxCornerRadiusBottomEnd="10dp"
+                    app:boxCornerRadiusBottomStart="10dp"
+                    app:boxCornerRadiusTopEnd="10dp"
+                    app:boxCornerRadiusTopStart="10dp"
+                    app:boxStrokeColor="@color/primary_navy"
+                    app:helperText="@string/hint_name"
+                    app:helperTextTextColor="@color/text_muted">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName|textCapWords"
+                        android:textColor="@color/text_main"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Input Usia & Berat Bagasi (Grid Horizontal) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <!-- Input Usia -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilAge"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:hint="@string/label_age"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:boxStrokeColor="@color/primary_navy"
+                        app:helperText="@string/hint_age"
+                        app:helperTextTextColor="@color/text_muted">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:textColor="@color/text_main"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Input Berat Bagasi -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilBaggage"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:hint="@string/label_baggage"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:boxStrokeColor="@color/primary_navy"
+                        app:helperText="@string/hint_baggage"
+                        app:helperTextTextColor="@color/text_muted">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etBaggage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:textColor="@color/text_main"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- Tombol Submit Pemesanan (Emerald Accent Color) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSubmitBooking"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/accent_emerald"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/btn_submit_booking"
+                    android:textAllCaps="false"
+                    android:textColor="@color/surface_white"
+                    android:textSize="15sp"
+                    app:cornerRadius="12dp"
+                    app:elevation="2dp" />
+
+                <!-- Tombol Reset Form -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnResetBooking"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/btn_reset"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_muted"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Container Hasil Status Konfirmasi (Badge/Card Elegan) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardBookingResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/surface_white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/surface_border"
+            app:strokeWidth="1dp"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="@string/title_booking_result"
+                    android:textColor="@color/text_main"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Badge Status Pemesanan (tvBookingStatus) -->
+                <TextView
+                    android:id="@+id/tvBookingStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_status_badge_success"
+                    android:paddingStart="14dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="6dp"
+                    android:text="@string/booking_success"
+                    android:textColor="@color/status_success_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- Detail Rincian Pemesanan (tvBookingDetails) -->
+                <TextView
+                    android:id="@+id/tvBookingDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/text_main"
+                    android:textSize="14sp"
+                    tools:text="Tiket atas nama Budi Santoso (NIK: 3201012304950001)\nKategori: Dewasa\nBerat Bagasi: 15 kg\nTotal Pembayaran: Rp 1.000.000" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Informasi Ketentuan Tarif & Modul QA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_info_banner"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ketentuan Tarif (Business Logic QA):"
+                android:textColor="@color/primary_navy"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="3dp"
+                android:text="• NIK: Wajib tepat 16 digit angka\n• Tarif Dasar: Rp 1.000.000\n• Balita (&lt; 3 thn): Diskon 100% (Rp 0)\n• Lansia (≥ 60 thn): Diskon 20%\n• Bagasi Maks: Free 20 kg, Denda kelebihan: Rp 25.000 / kg"
+                android:textColor="@color/text_muted"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

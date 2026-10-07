@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">TransportBookingQA</string>
+    <string name="app_subtitle">Sistem Reservasi Tiket &amp; QA Testbed</string>
+    <string name="header_booking_title">Form Pemesanan Tiket</string>
+    <string name="header_booking_subtitle">Isi data identitas penumpang untuk kalkulasi tarif dan validasi tiket</string>
+
+    <string name="label_nik">Nomor Induk Kependudukan (NIK)</string>
+    <string name="hint_nik">16 Digit Angka (Contoh: 3201012304950001)</string>
+
+    <string name="label_name">Nama Lengkap Penumpang</string>
+    <string name="hint_name">Sesuai KTP / Paspor</string>
+
+    <string name="label_age">Usia Penumpang (Tahun)</string>
+    <string name="hint_age">Contoh: 25</string>
+
+    <string name="label_baggage">Berat Bagasi (Kg)</string>
+    <string name="hint_baggage">Maks. free 20 kg</string>
+
+    <string name="btn_submit_booking">Proses Pemesanan Tiket</string>
+    <string name="btn_reset">Reset Form</string>
+
+    <string name="title_booking_result">Status Reservasi</string>
+    <string name="fare_rule_info">Info Tarif: Dasar Rp 1.000.000 | Balita (&lt;3 thn) Gratis 100% | Lansia (≥60 thn) Diskon 20% | Denda Bagasi &gt;20 kg: Rp 25.000/kg</string>
+
+    <string name="error_nik_empty">NIK tidak boleh kosong</string>
+    <string name="error_nik_invalid">NIK Wajib 16 Digit</string>
+    <string name="error_name_empty">Nama penumpang tidak boleh kosong</string>
+    <string name="booking_success">Pemesanan Berhasil</string>
+</resources>
+

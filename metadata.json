@@ -1,0 +1,6 @@
+{
+  "name": "TransportBookingQA",
+  "description": "Sistem Reservasi Tiket Transportasi dengan pengujian kualitas software (Unit Test, Room In-Memory, MockWebServer, dan Espresso UI Test).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

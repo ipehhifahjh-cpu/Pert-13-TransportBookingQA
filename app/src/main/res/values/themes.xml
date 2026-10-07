@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.TransportBookingQA" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_navy</item>
+        <item name="colorOnPrimary">@color/text_on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_navy_light</item>
+        <item name="colorSecondary">@color/accent_emerald</item>
+        <item name="colorOnSecondary">@color/surface_white</item>
+        <item name="android:windowBackground">@color/bg_ice_slate</item>
+        <item name="android:statusBarColor">@color/primary_navy_dark</item>
+    </style>
+
+    <!-- Compatibility alias -->
+    <style name="Theme.MyApplication" parent="Theme.TransportBookingQA" />
+</resources>

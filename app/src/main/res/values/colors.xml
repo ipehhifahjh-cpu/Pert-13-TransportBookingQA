@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Palette: Deep Indigo / Navy (#1E293B) -->
+    <color name="primary_navy">#1E293B</color>
+    <color name="primary_navy_dark">#0F172A</color>
+    <color name="primary_navy_light">#334155</color>
+
+    <!-- Accent / Action: Emerald Green (#10B981) -->
+    <color name="accent_emerald">#10B981</color>
+    <color name="accent_emerald_dark">#059669</color>
+    <color name="accent_emerald_light">#34D399</color>
+
+    <!-- Background & Surface: Light Ice Slate (#F1F5F9) -->
+    <color name="bg_ice_slate">#F1F5F9</color>
+    <color name="surface_white">#FFFFFF</color>
+    <color name="surface_border">#CBD5E1</color>
+
+    <!-- Typography -->
+    <color name="text_main">#0F172A</color>
+    <color name="text_muted">#64748B</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Status Badges -->
+    <color name="status_success_bg">#DCFCE7</color>
+    <color name="status_success_border">#86EFAC</color>
+    <color name="status_success_text">#166534</color>
+    <color name="status_error_bg">#FEE2E2</color>
+    <color name="status_error_border">#FCA5A5</color>
+    <color name="status_error_text">#991B1B</color>
+</resources>
+
